@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="naranja_principal">#FF6B00</color>
+    <color name="naranja_oscuro">#A04100</color>
+    <color name="marron_texto">#1C1B1B</color>
+    <color name="marron_suave">#5A4136</color>
+    <color name="fondo_principal">#FCF9F8</color>
+    <color name="tarjetas">#F6F3F2</color>
+    <color name="blanco">#FFFFFF</color>
 </resources>
