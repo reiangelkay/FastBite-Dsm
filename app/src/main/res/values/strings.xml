@@ -3,7 +3,14 @@
     <string name="login_subtitle">Tu comida favorita, volando a tu puerta.</string>
     <string name="email_hint">Correo electrónico</string>
     <string name="password_hint">Contraseña</string>
+    <string name="email_hint_example">tu@email.com</string>
+    <string name="password_hint_stars">********</string>
     <string name="login_button">Iniciar sesión</string>
     <string name="register_text">¿No tienes una cuenta? Regístrate</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="password_label">Contraseña</string>
+    <string name="register_subtitle">Crea una cuenta para comenzar</string>
+    <string name="register_button">Registrar</string>
+    <string name="already_have_account">¿Ya tienes una cuenta? Ingresar</string>
     <string name="main_menu_placeholder">Menú Principal (En construcción)</string>
 </resources>

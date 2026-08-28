@@ -18,24 +18,30 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        
+
+        // Inicializamos el objeto de autenticación
         auth = FirebaseAuth.getInstance()
+        
         btnLogin = findViewById(R.id.btnLogin)
         tvRegister = findViewById(R.id.tvRegister)
         
+        val emailField = findViewById<EditText>(R.id.txtEmailAddress)
+        val passwordField = findViewById<EditText>(R.id.txtPassword)
+
         btnLogin.setOnClickListener {
-            val email = findViewById<EditText>(R.id.txtEmailAddress).text.toString()
-            val password = findViewById<EditText>(R.id.txtPassword).text.toString()
+            val email = emailField.text.toString().trim()
+            val password = passwordField.text.toString().trim()
             
             if(email.isNotEmpty() && password.isNotEmpty()) {
                 login(email, password)
             } else {
-                Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Complete todos los campos requeridos", Toast.LENGTH_SHORT).show()
             }
         }
 
         tvRegister.setOnClickListener {
-            // Implementar redirección a registro
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -48,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
                     finish()
                 }
             }.addOnFailureListener { exception ->
-                Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext, "Error: ${exception.localizedMessage}", Toast.LENGTH_LONG).show()
             }
     }
 }
