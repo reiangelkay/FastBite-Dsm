@@ -11,46 +11,54 @@ import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
+    // Referencia del objeto FirebaseAuth y componentes
     private lateinit var auth: FirebaseAuth
+    private lateinit var buttonRegister: Button
+    private lateinit var textViewLogin: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
+        // Inicializamos el objeto FirebaseAuth
         auth = FirebaseAuth.getInstance()
+        
+        buttonRegister = findViewById(R.id.btnRegister)
+        textViewLogin = findViewById(R.id.textViewLogin)
 
-        val emailField = findViewById<EditText>(R.id.txtEmail)
-        val passwordField = findViewById<EditText>(R.id.txtPass)
-        val btnRegister = findViewById<Button>(R.id.btnRegister)
-        val tvLogin = findViewById<TextView>(R.id.textViewLogin)
-
-        btnRegister.setOnClickListener {
-            val email = emailField.text.toString().trim()
-            val password = passwordField.text.toString().trim()
-
+        buttonRegister.setOnClickListener {
+            val email = findViewById<EditText>(R.id.txtEmail).text.toString().trim()
+            val password = findViewById<EditText>(R.id.txtPass).text.toString().trim()
+            
             if (email.isNotEmpty() && password.isNotEmpty()) {
-                registerUser(email, password)
+                this.register(email, password)
             } else {
-                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Complete todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
 
-        tvLogin.setOnClickListener {
-            finish()
+        // Evento para regresar a la pantalla de Login
+        textViewLogin.setOnClickListener {
+            this.goToLogin()
         }
     }
 
-    private fun registerUser(email: String, password: String) {
+    private fun register(email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
+            .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Registro exitoso", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     finish()
-                } else {
-                    Toast.makeText(this, "Error en el registro: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
+            }.addOnFailureListener { exception ->
+                Toast.makeText(applicationContext, "Error: ${exception.localizedMessage}", Toast.LENGTH_LONG).show()
             }
+    }
+
+    private fun goToLogin() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
