@@ -6,4 +6,9 @@
     </style>
 
     <style name="Theme.FastBite" parent="Base.Theme.FastBite" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.FastBite.Splash" parent="Theme.FastBite">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
 </resources>
