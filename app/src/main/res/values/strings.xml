@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FastBite</string>
+    <string name="login_subtitle">Tu comida favorita, volando a tu puerta.</string>
+    <string name="email_hint">Correo electrónico</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="register_text">¿No tienes una cuenta? Regístrate</string>
 </resources>
