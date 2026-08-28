@@ -1,13 +1,13 @@
-# FastBite 🍔
+# FastBite 
 
 FastBite es una aplicación de entrega de comida diseñada para ofrecer una experiencia rápida y atractiva a los usuarios. La aplicación permite a los usuarios registrarse, iniciar sesión y explorar opciones de comida favorita con una interfaz moderna y limpia.
 
-## 🚀 Características
+##  Características
 - **Autenticación:** Integración con Firebase Authentication para registro e inicio de sesión seguro.
 - **Diseño Moderno:** Uso de ConstraintLayout y Material Design para una interfaz responsiva.
 - **Navegación Fluida:** Transiciones sencillas entre Login, Registro y la Pantalla Principal.
 
-## 🎨 Paleta de Colores
+##  Paleta de Colores
 Para mantener una identidad visual coherente y apetitosa, se seleccionaron los siguientes colores:
 
 | Color | Hexadecimal | Uso |
@@ -19,13 +19,13 @@ Para mantener una identidad visual coherente y apetitosa, se seleccionaron los s
 | **Fondo Principal** | `#FCF9F8` | Fondo de las pantallas para un look limpio. |
 | **Tarjetas** | `#F6F3F2` | Fondos de elementos CardView. |
 
-## 🛠️ Tecnologías Usadas
+##  Tecnologías Usadas
 - **Lenguaje:** Kotlin
 - **Plataforma:** Android SDK
 - **Backend:** Firebase (Auth)
 - **UI:** XML (ConstraintLayout, Material Components)
 
-## 📦 Instalación
+##  Instalación
 1. Clona este repositorio.
 2. Abre el proyecto en **Android Studio**.
 3. Sincroniza el proyecto con los archivos de Gradle.
@@ -33,4 +33,4 @@ Para mantener una identidad visual coherente y apetitosa, se seleccionaron los s
 5. Ejecuta la aplicación en un emulador o dispositivo físico.
 
 ---
-*Desarrollado con ❤️ para FastBite.*
+*Desarrollado con sencilles para FastBite.*
