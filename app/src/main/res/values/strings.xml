@@ -13,4 +13,14 @@
     <string name="register_button">Registrar</string>
     <string name="already_have_account">¿Ya tienes una cuenta? Ingresar</string>
     <string name="main_menu_placeholder">Menú Principal (En construcción)</string>
+    <string name="user_name">Carlos Mendoza</string>
+    <string name="user_email">carlos.mendoza@email.com</string>
+    <string name="membership_gold">⭐ Miembro Gold</string>
+    <string name="saved_addresses">Direcciones Guardadas</string>
+    <string name="addresses_description">Casa, Oficina, Gym...</string>
+    <string name="logout_button">Cerrar Sesión</string>
+    <string name="nav_home">Inicio</string>
+    <string name="nav_search">Buscar</string>
+    <string name="nav_orders">Pedidos</string>
+    <string name="nav_profile">Perfil</string>
 </resources>
