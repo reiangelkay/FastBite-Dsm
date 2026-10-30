@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish()
                 }

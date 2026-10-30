@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/cartItemImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_rounded"
+            android:src="@drawable/banner_hamburguesa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cartItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Item Name"
+            android:textColor="#1C1B1B"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnRemove"
+            app:layout_constraintStart_toEndOf="@id/cartItemImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cartItemPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:text="$12.99"
+            android:textColor="#FF6B00"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnRemove"
+            app:layout_constraintStart_toEndOf="@id/cartItemImage"
+            app:layout_constraintTop_toBottomOf="@id/cartItemName" />
+
+        <LinearLayout
+            android:id="@+id/quantityContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="#F6F3F2"
+            app:layout_constraintStart_toEndOf="@id/cartItemImage"
+            app:layout_constraintTop_toBottomOf="@id/cartItemPrice">
+
+            <Button
+                android:id="@+id/btnDecrease"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:backgroundTint="#F6F3F2"
+                android:text="-"
+                android:textColor="#1C1B1B"
+                android:textSize="18sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp" />
+
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="#1C1B1B"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIncrease"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:backgroundTint="#FF6B00"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:padding="0dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cartItemTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Total: $12.99"
+            android:textColor="#1C1B1B"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnRemove"
+            app:layout_constraintStart_toEndOf="@id/cartItemImage"
+            app:layout_constraintTop_toBottomOf="@id/quantityContainer" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:backgroundTint="#FFF4E6"
+            android:text="×"
+            android:textColor="#A04100"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

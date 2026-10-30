@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -65,11 +66,20 @@ class MainActivity : AppCompatActivity() {
             // Cerrar sesión en Firebase
             auth.signOut()
             Toast.makeText(this, "Sesión cerrada correctamente", Toast.LENGTH_SHORT).show()
-            
+
             // Redirigir al LoginActivity
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        // Configuración de navegación en el bottom bar
+        val navHome = findViewById<TextView>(R.id.nav_home)
+        val navProfile = findViewById<TextView>(R.id.nav_profile)
+
+        navHome.setOnClickListener {
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -28,4 +28,25 @@
     <string name="save_button">Guardar</string>
     <string name="payment_methods">Métodos de Pago</string>
     <string name="payment_methods_description">Tarjetas, PayPal, Efectivo</string>
+    <string name="search_restaurants">Buscar restaurantes...</string>
+    <string name="category_all">Todos</string>
+    <string name="category_pizza">Pizza</string>
+    <string name="category_burger">Hamburguesas</string>
+    <string name="category_sushi">Sushi</string>
+    <string name="category_mexican">Mexicana</string>
+    <string name="category_asian">Asiática</string>
+    <string name="delivery_time">Tiempo de entrega</string>
+    <string name="delivery_fee">Envío</string>
+    <string name="restaurant_detail_title">Detalle Restaurante</string>
+    <string name="menu_title">Menú</string>
+    <string name="add_to_cart">Agregar</string>
+    <string name="added_to_cart">Agregado al carrito</string>
+    <string name="cart_title">Carrito</string>
+    <string name="empty_cart">Tu carrito está vacío</string>
+    <string name="empty_cart_description">Agrega algunos items deliciosos</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery">Envío</string>
+    <string name="total">Total</string>
+    <string name="checkout">Proceder al Pago</string>
+    <string name="processing_order">Procesando pedido</string>
 </resources>
